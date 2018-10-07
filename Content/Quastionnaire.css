@@ -1,0 +1,67 @@
+﻿
+#textInput {
+    display: inline-block;
+    width: 42.5%;
+    margin-bottom: 5vh;
+    min-width: 200px;
+    float: left;
+    border-radius: 4px;
+}
+
+    #textInput:nth-child(2n) {
+        margin-left: 5%;
+    }
+
+    #textInput:nth-child(2n-1) {
+        margin-left: 5%;
+    }
+
+fieldset {
+    padding: 1%;
+    display: inline-block;
+    width: 40.5%;
+    height: 35vh;
+    margin-bottom: 5vh;
+    min-width: 200px;
+    float: left;
+    border-radius: 4px;
+}
+
+    fieldset:nth-child(2n) {
+        margin-left: 5%;
+    }
+
+    fieldset:nth-child(2n-1) {
+        margin-left: 5%;
+    }
+
+input{
+    margin-bottom: 1.5%;
+}
+
+
+legend {
+    background-color: #6b6b6b;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+#submitButton {
+    margin-bottom: 5vh;
+    margin-left: 42%;
+    height: 6vh;
+    width: 12vw;
+    cursor: pointer;
+}
+#submitButton:hover{
+    border: 1px solid #1d7ce4;
+}
+#submitButton:focus {
+    border: 2px solid red;
+}
+    /*.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}*/
+    /*input {
+    margin: .4rem;
+}*/

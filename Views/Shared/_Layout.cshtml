@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="@Url.Content("~/Content/Layout.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Index.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/GuestPage.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Quastionnaire.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/ShowQuastionnaireResult.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <a href='@Url.Action("Index", "Home")'>
+                <img id="icon" src="~/Content/Icons/LogoIcon.png" alt="Logo" />
+            </a>
+        </div>
+        <div id="name">BlogApp</div>
+    </header>
+
+    <section id="content">
+        <div id="incertContent">
+            @RenderBody()
+        </div>
+
+        <div id="navbar">
+            <div id="navbar_item">
+                <a href="@Url.Action("Index", "Home")" title="Main page">
+                    <img id="navbar_icon" src="~/Content/Icons/MainPageIcon.png" alt="Main page" />
+                </a>
+            </div>
+
+            <div id="navbar_item">
+                <a href="@Url.Action("GuestPage", "Home")" title="Guest page">
+                    <img id="navbar_icon" src="~/Content/Icons/GuestIcon.png" alt="Guest page" />
+                </a>
+            </div>
+
+            <div id="navbar_item">
+                <a href="@Url.Action("Quastionnaire", "Home")" title="Quastionnaire">
+                    <img id="navbar_icon" src="~/Content/Icons/QuastionnaireIcon.png" alt="Quastionnaire" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer id="footer">
+        <div id="wrapper">
+            <div id="copyright">&copy; Copyright. Some txt. Some txt. Some txt. Some txt. Some txt.</div>
+            <div id="toTopButton">
+                <a href="#" title="Back to top">
+                    <img id="footer_icon" src="~/Content/Icons/upArrowIcon.png" alt="Up Arrow" />
+                </a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

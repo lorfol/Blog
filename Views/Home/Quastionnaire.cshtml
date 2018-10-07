@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Quastionnaire";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 id="pageHeader">Quastionnaire</h2>
+
+<div id="quastionnaire">
+    <form id="quastionnaire_form" action="" method="post">
+        <input id="textInput" type="text" placeholder="Name" name="Name" required />
+        <input id="textInput" type="text" placeholder="E-mail" name="Email" required />
+
+        @{
+            IEnumerable<string> skills = new List<string>
+            {
+                "C#",
+                "MVC",
+                "UWP",
+                "Azure",
+                "JavaScript",
+                "Java",
+                "Kotlin",
+                "AWS",
+                "PHP"
+            };
+        }
+
+        @{
+            IEnumerable<string> genders = new List<string>
+            {
+                "Male",
+                "Female",
+                "Transgender",
+                "Other"
+            };
+        }
+
+        <fieldset id="skills">
+            <legend>Your skills</legend>
+            @foreach (var skill in skills)
+            {
+                <div>
+                    <input type="checkbox" name="Skills" value="@skill" />
+                    <label>@skill</label>
+                </div>
+            }
+        </fieldset>
+
+        <fieldset id="gender">
+            <legend>Your gender</legend>
+
+            @foreach (var gender in genders)
+            {
+                <div>
+                    <input type="radio" name="Gender" value="@gender" checked />
+                    <label>@gender</label>
+                </div>
+            }
+        </fieldset>
+
+        <input id="submitButton" type="submit" value="Submit" />
+
+    </form>
+</div>
+

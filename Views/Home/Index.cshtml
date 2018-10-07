@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Main Page";
+    ViewBag.Style = "~/Content/Index.css";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 id="pageHeader">Main page</h2>
+
+@model Blog.Resources.ArticleRes
+@for (int i = 0; i < 8; i++)
+{
+    @Html.Partial("PartialArticle", Model)
+}
+
+

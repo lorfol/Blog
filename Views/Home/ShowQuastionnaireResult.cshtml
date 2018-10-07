@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "ShowQuastionnaire";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Blog.Utils.Helpers
+@model Blog.Resources.ResultsRes
+
+<h2 id="pageHeader">Quastionnaire Result</h2>
+
+<div id="result">
+
+    <div id="table">
+        <table>
+            <tr>    
+                <td>Name:</td>
+                <td>@Model.Name</td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td>@Model.Gender</td>
+            </tr>
+
+            <tr>
+                <td>E-mail:</td>
+                <td>@Model.Email</td>
+            </tr>
+        
+            <tr id="skillRow">
+                <td>Skills (in ul):</td>
+                <td id="listCell">@Html.CreateList(Model.Skills, "ul")</td>
+            </tr>
+
+            <tr id="skillRow">
+                <td>Skills (in ol):</td>
+                <td id="listCell">@Html.CreateList(Model.Skills, "ol")</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+

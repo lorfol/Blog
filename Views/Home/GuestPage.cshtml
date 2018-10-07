@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "GuestPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 id="pageHeader">Guest Page</h2>
+
+
+<div id="reviewForm">
+    <h3 id="appeal">Live your feedback!</h3>
+
+    <form id="guest_form" action="" method="post">
+        <div class="wrapper">
+            <input type="text" placeholder="Name" name="Name" />
+            <input type="email" placeholder="E-mail" name="Email" />
+        </div>
+        <br />
+        <textarea placeholder="Feedback" name="Text" maxlength="200"></textarea><br />
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+
+<div class="reviews">
+
+    @model Blog.Resources.FeedbackRes
+    @for (int i = 0; i < 8; i++)
+    {
+        @Html.Partial("PartialFeedback", Model)
+    }
+</div>

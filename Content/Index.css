@@ -1,0 +1,44 @@
+﻿
+
+#pageHeader{
+    margin: 3vh auto 3vh 3.7vw;
+}
+
+
+#articleItem{
+    background-color: darkgrey;
+    margin-bottom: 5vh;
+    width: 42.5%;
+    height: 35vh;
+    min-width: 200px;
+    float: left;
+    border-radius:4px;
+}
+
+#articleItem:nth-child(2n) {
+    margin-left: 5%;
+}
+
+#articleItem:nth-child(2n-1) {
+    margin-left: 5%;
+}
+
+#articleName{
+    display: inline-block;
+    margin: 10px auto 5px 20px;
+}
+
+#articleDate {
+    float: right;
+    margin: 12px 20px 5px auto;
+}
+
+#articleText {
+    margin-top: 10%;
+    margin-left: 5%;
+    width: 100px;
+    height: 16vh;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 80%;
+}
